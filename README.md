@@ -29,7 +29,7 @@ $ vorlon
 
 ## Presentación 
 
-`https://slides.com/khriztianmoreno/vorlonjs/e`
+`https://slides.com/khriztianmoreno/vorlonjs/`
 
 ## The MIT License (MIT)
 
