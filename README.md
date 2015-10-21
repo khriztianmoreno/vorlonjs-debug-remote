@@ -33,4 +33,4 @@ $ vorlon
 
 ## The MIT License (MIT)
 
-Copyright (c) 2015 - Julián Duque
+Copyright (c) 2015 - Cristian Moreno
