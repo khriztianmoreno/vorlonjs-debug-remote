@@ -24,9 +24,12 @@ $ vorlon
 
 ## Proyecto Ejemplo
 
-	# $ npm install
-	# $ gulp
+	$ npm install
+	$ gulp
 
+## Presentación 
+
+`https://slides.com/khriztianmoreno/vorlonjs/e`
 
 ## The MIT License (MIT)
 
