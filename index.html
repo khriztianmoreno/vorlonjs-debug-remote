@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Vorlon.js - MedellinJS Rocks!!</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./style.css">
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">VorlonJS</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</div>
+		<div class="container">
+			<p class="lead">
+				This test page includes the vorlon client script. Ensure you are running the Vorlon.JS server, as explained <a href="http://vorlonjs.com/documentation">in the Vorlon.JS docs</a>. Then open the <a href="http://localhost:1337/dashboard">Vorlon.JS dashboard</a> and refresh this page.
+			</p>
+			<div>
+				<h2>Console Logging</h2>
+				<p>Console messages get logged to the Vorlon.JS dashboard. Try it!</p>
+				<button onclick="console.debug('This is a', 'debug', 'message !')">console.debug()</button>
+				<button onclick="console.info('This is a', 'info', 'message !')">console.info()</button>
+				<button onclick="console.warn('This is a', 'warn', 'message !')">console.warn()</button>
+				<button onclick="console.error('This is a', 'error', 'message !')">console.error()</button>
+			</div>
+			<div>
+				<h2>Dom Explorer</h2>
+				<p>You can inspect the DOM of this page from the Vorlon.JS dashboard. Here is some html with inline styles, and css styles applied.
+				<div>
+					<input id="inputDemo" type="text" placeholder="This is an input"/>
+					<!-- document.getElementById('inputDemo').value = 'Enter Name';-->
+					<div id="test">
+						<p>This text is styled by css</p>
+					</div>
+					<div id="test2" style="font-family: monospace">
+						<p id="searchsample">This text has inline styles</p>
+					</div>
+					<div id="test3" class="class1 class2">
+						<p>This text has some classes</p>
+					</div>
+					<div>
+						<img src="./ship.svg" width="50px"/>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h2>Resources Explorer</h2>
+				<p>Resources Explorer the Vorlon.JS dashboard. Try it!</p>
+				<div id="result" class="lead"></div>
+				<button onclick="storageExample()">Local Storage</button>
+				<button onclick="sessionExample()">Session Storage</button>
+			</div>
+			<div>
+				<h2>Network</h2>
+				<p>Monitor ajax calls</p>
+				<button onclick="ajaxCall()">make ajax call</button>
+			</div>
+		</div>
+		<!-- /.container -->
+		<script type="text/javascript">
+
+			var msj = 'Community by Passion!'
+			function storageExample(){
+					if(typeof(Storage) !== undefined) {
+					    // Store
+					    localStorage.setItem("medJs", msj);
+					    // Retrieve
+					    document.getElementById("result").innerHTML = localStorage.getItem("medJs");
+					} else {
+					    // Sorry! No Web Storage support..
+					}
+				};
+			
+			function sessionExample(){
+				if (sessionStorage.clickcount) {
+				    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+				} else {
+				    sessionStorage.clickcount = 1;
+				}
+				document.getElementById("result").innerHTML = "You have clicked the button " +
+				sessionStorage.clickcount + " time(s) in this session.";
+			};
+			
+			function ajaxCall(){
+			       var oReq = new XMLHttpRequest();
+			       oReq.open("get", "http://localhost:8080/index.html", true);
+			       oReq.send();
+			   };
+		</script>
+		<!-- VorlonJS -->
+		<script src="http://localhost:1337/vorlon.js"></script>
+	</body>
+</html>

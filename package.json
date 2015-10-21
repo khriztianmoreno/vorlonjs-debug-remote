@@ -1,0 +1,15 @@
+{
+  "name": "vorlon",
+  "version": "1.0.0",
+  "description": "Web site demo by remote debug",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cristian Moreno",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0"
+  }
+}
