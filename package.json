@@ -10,6 +10,6 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "4.0.2",
-    "gulp-connect": "2.3.1"
+    "gulp-connect": "5.7.0"
   }
 }
